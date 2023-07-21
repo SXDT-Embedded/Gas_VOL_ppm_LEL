@@ -2,7 +2,7 @@
  * @Author       : yzy
  * @Date         : 2023-02-20 15:55:43
  * @LastEditors: xt 1834031381@qq.com
- * @LastEditTime: 2023-07-21 11:14:18
+ * @LastEditTime: 2023-07-21 13:46:35
  * @FilePath     :\��ȼ����VOL-ppm-LEL\vol_2_ppm_lel.c
  * @Description  :  VOLתppm��LEL
  *
@@ -15,9 +15,9 @@
 #define ETHANCE_LEL   0.03
 #define PROPANCE_LEL  0.021
 
-// char change_name[4];
-// char gas_name[5];
-// double vol, lel, ppm, gas_lel;
+char change_name[4];
+char gas_name[5];
+double vol, lel, ppm, gas_lel;
 
 void GasChange(void);
 //                  ��ըŨ�� (V%)
