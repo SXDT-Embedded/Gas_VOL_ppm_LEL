@@ -2,9 +2,9 @@
  * @Author       : yzy
  * @Date         : 2023-02-20 15:55:43
  * @LastEditors: xt 1834031381@qq.com
- * @LastEditTime: 2023-07-20 16:35:06
- * @FilePath     :\¿ÉÈ¼ÆøÌåVOL-ppm-LEL\vol_2_ppm_lel.c
- * @Description  :  VOL×ªppmºÍLEL
+ * @LastEditTime: 2023-07-21 13:46:35
+ * @FilePath     :\ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½VOL-ppm-LEL\vol_2_ppm_lel.c
+ * @Description  :  VOL×ªppmï¿½ï¿½LEL
  *
  * Copyright (c) 2023 by yzy, All Rights Reserved.
  */
@@ -20,21 +20,21 @@ char gas_name[5];
 double vol, lel, ppm, gas_lel;
 
 void GasChange(void);
-//                  ±¬Õ¨Å¨¶È (V%)
-// ÎïÖÊÃû³Æ	·Ö×ÓÊ½	ÏÂÏÞ LEL	ÉÏÏÞ UEL
-// ¼×Íé	    CH4	    5	        15
-// ÒÒÍé	    C2H6	3	        15.5
-// ±ûÍé	    C3H8	2.1	        9.5
+//                  ï¿½ï¿½Õ¨Å¨ï¿½ï¿½ (V%)
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½Ê½	ï¿½ï¿½ï¿½ï¿½ LEL	ï¿½ï¿½ï¿½ï¿½ UEL
+// ï¿½ï¿½ï¿½ï¿½	    CH4	    5	        15
+// ï¿½ï¿½ï¿½ï¿½	    C2H6	3	        15.5
+// ï¿½ï¿½ï¿½ï¿½	    C3H8	2.1	        9.5
 
-// ¼×ÍéµÄ±¬Õ¨ÏÂÏÞÎª 5.0VOL%£¬¼´ 100% LEL=5.0VOL%
-// ÄÇÃ´ 10% LEL = 5.0VOL% ¡Á 10% = 0.5 VOL%
+// ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Õ¨ï¿½ï¿½ï¿½ï¿½Îª 5.0VOL%ï¿½ï¿½ï¿½ï¿½ 100% LEL=5.0VOL%
+// ï¿½ï¿½Ã´ 10% LEL = 5.0VOL% ï¿½ï¿½ 10% = 0.5 VOL%
 // 10000 ppm = 1 Vol%
 
 int main(void)
 {
     while(1)
     {
-        printf("ÊäÈëÆøÌåµÄ·Ö×ÓÊ½,ÈçCH4¡¢C2H6¡¢C3H8¡£ÈôÍË³ö×ª»¯,ÊäÈëbreak\r\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Ê½,ï¿½ï¿½CH4ï¿½ï¿½C2H6ï¿½ï¿½C3H8ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½×ªï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½break\r\n");
         scanf("%s", &gas_name);
         
         if (!strcmp(gas_name, "CH4"))
@@ -55,7 +55,7 @@ int main(void)
         }
         else
         {
-            printf("ÊäÈëÓÐÎó,");
+            printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,");
             continue;
         }
         GasChange();
@@ -68,25 +68,25 @@ void GasChange(void)
 {
     while(1)
     {
-        printf("ÊäÈë×ª»¯µÄÃû³Æ,ÈçVOL¡¢ppm¡¢LEL¡£ÈôÍË³ö¸ÃÆøÌå,ÊäÈëbreak¡£\r\n");
+        printf("ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½VOLï¿½ï¿½ppmï¿½ï¿½LELï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½breakï¿½ï¿½\r\n");
         scanf("%s", &change_name);
         if (!strcmp(change_name, "VOL"))
         {
-            printf("ÊäÈëVOL%%: \r\n");
+            printf("ï¿½ï¿½ï¿½ï¿½VOL%%: \r\n");
             scanf("%lf", &vol);
             ppm = 10000 * vol;
             lel = vol / gas_lel;
         }
         else if (!strcmp(change_name, "ppm"))
         {
-            printf("ÊäÈëppm\r\n"); 
+            printf("ï¿½ï¿½ï¿½ï¿½ppm\r\n"); 
             scanf("%lf", &ppm);
             vol = ppm / 10000;
             lel = vol / gas_lel;
         }
         else if (!strcmp(change_name, "LEL"))
         {
-            printf("ÊäÈëLEL\r\n"); 
+            printf("ï¿½ï¿½ï¿½ï¿½LEL\r\n"); 
             scanf("%lf", &lel);
             vol = lel * gas_lel;
             ppm = 10000 * vol;
@@ -97,7 +97,7 @@ void GasChange(void)
         }
         else
         {
-            printf("ÊäÈëÓÐÎó,");
+            printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,");
             continue;
         }
         printf("VOL%% = %.4lf\r\n", vol);
