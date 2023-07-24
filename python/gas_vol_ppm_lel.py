@@ -66,7 +66,7 @@ def calculate():
                 lel, vol, ppm = 0, 0, 0
         else:
             lel, vol, ppm = 0, 0, 0
-        
+
         entry_lel.delete(0, tk.END)
         entry_lel.insert(tk.END, str(lel))
         entry_vol.delete(0, tk.END)
