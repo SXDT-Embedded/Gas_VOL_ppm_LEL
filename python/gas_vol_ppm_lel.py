@@ -65,7 +65,7 @@ def calculate():
                 lel = vol / 0.021
             else:
                 lel, vol, ppm = 0, 0, 0
-                
+
         else:
             lel, vol, ppm = 0, 0, 0
 
@@ -127,7 +127,7 @@ def show_help():
 有任何问题，请点击菜单栏中的“帮助”查看帮助信息。
 """
     messagebox.showinfo("帮助", help_text)
-    
+
 """
 # 设置页面
 def settings():
